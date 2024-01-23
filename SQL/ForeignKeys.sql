@@ -1,0 +1,31 @@
+﻿/* ForeignKeys.sql
+
+SCRIPT PARA CRIAÇÃO DOS RELACIONAMENTOS.
+Deve ser executado após a criação das tabelas.
+
+*/
+
+USE DBCONCESSIONARIA
+GO
+
+ALTER TABLE VEI002_MODELO
+    ADD
+        CONSTRAINT FK_VEI002_IdeMarca
+            FOREIGN KEY (IdeMarca) REFERENCES VEI001_MARCA(IdeMarca);
+GO
+
+ALTER TABLE VEI004_MODELO_VERSAO
+    ADD
+        CONSTRAINT FK_VEI004_IdeModelo
+            FOREIGN KEY (IdeModelo) REFERENCES VEI002_MODELO(IdeModelo),
+        CONSTRAINT FK_VEI004_IdeCombustivel
+            FOREIGN KEY (IdeCombustivel) REFERENCES VEI003_COMBUSTIVEL(IdeCombustivel)
+GO
+
+ALTER TABLE VND002_VENDA
+    ADD
+        CONSTRAINT FK_VND002_IdeVendedor
+            FOREIGN KEY (IdeVendedor) REFERENCES VND001_VENDEDOR(IdeVendedor),
+        CONSTRAINT FK_VND002_IdeModeloVersao
+            FOREIGN KEY (IdeModeloVersao) REFERENCES VEI004_MODELO_VERSAO(IdeModeloVersao)
+GO

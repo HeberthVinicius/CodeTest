@@ -1,0 +1,1 @@
+docker run --name sqlserver --hostname sqlserver -e "TZ=America/Sao_Paulo" -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Dev@Dckr1" -u 0:0 -e "MSSQL_AGENT_ENABLED=True" -v /var/opt/mssql/data/sqlserver:/var/opt/mssql/data -v /var/opt/mssql/sqlserver:/var/opt/mssql/log -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest 
