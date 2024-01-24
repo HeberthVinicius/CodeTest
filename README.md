@@ -122,3 +122,7 @@ No diretório [SQL](SQL) contém todos os scripts necessários para a criação 
 8. Subir seu projeto para o seu repositório pessoal.
 
 9. Nos fornecer a url para o seu repositório para avaliarmos.
+
+---
+
+### Teste obtido no ínicio de 2022. Feito em dotNet6 

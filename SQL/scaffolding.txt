@@ -1,0 +1,3 @@
+dotnet ef dbcontext scaffold "StandardConnection" Microsoft.EntityFrameworkCore.SqlServer -o Models --force
+
+dotnet ef dbcontext scaffold "Server=localhost,1433; Initial Catalog=DBCONCESSIONARIA; User Id=sa;Password= Dev@Dckr1;" Microsoft.EntityFrameworkCore.SqlServer -o Models --force
