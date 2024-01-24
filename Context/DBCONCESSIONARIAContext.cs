@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using CodeTest.src.Models;
+using CodeTest.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace CodeTest.src.Context.Models
+namespace CodeTest.Context
 {
     public partial class DBCONCESSIONARIAContext : DbContext
     {

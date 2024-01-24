@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CodeTest.src.Models
+namespace CodeTest.Models
 {
     public partial class Vei001Marca
     {

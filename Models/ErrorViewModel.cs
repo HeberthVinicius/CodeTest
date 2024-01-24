@@ -1,4 +1,4 @@
-namespace CodeTest.src.Models;
+namespace CodeTest.Models;
 
 public class ErrorViewModel
 {

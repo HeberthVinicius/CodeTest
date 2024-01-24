@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Comissões";
+}
+
+@model List<ComissaoViewModel>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome do vendedor</th>
+            <th>Quantidade de veículos vendidos</th>
+            <th>Quantidade de vales combustíveis emitidos</th>
+            <th>Total em vendas</th>
+            <th>Total da comissão</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var comissao in Model)
+        {
+            <tr>
+                <td>@comissao.NomeVendedor</td>
+                <td>@comissao.QtdVeiculosVendidos</td>
+                <td>@comissao.QtdValesCombustiveis</td>
+                <td>R$ @comissao.TotalVendas.ToString("N3")</td>
+                <td>R$ @comissao.TotalComissao.ToString("N3")</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Total Geral</td>
+            <td>@Model.Sum(c => c.QtdVeiculosVendidos)</td>
+            <td>@Model.Sum(c => c.QtdValesCombustiveis)</td>
+            <td>R$ @Model.Sum(c => c.TotalVendas).ToString("N3")</td>
+            <td>R$ @Model.Sum(c => c.TotalComissao).ToString("N3")</td>
+        </tr>
+    </tfoot>
+</table>

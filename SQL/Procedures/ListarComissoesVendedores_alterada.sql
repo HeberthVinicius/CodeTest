@@ -6,12 +6,12 @@ Deve ser executado após a criação das tabelas.
 */
 
 USE DBCONCESSIONARIA
-
+GO
 CREATE OR ALTER PROCEDURE ListarComissoesVendedores
 AS
 BEGIN
     SELECT 
-        VND001_VENDEDOR.NmeVendedor,
+        VND001_VENDEDOR.NmeVendedor AS NomeVendedor,
         COUNT(VND002_VENDA.IdeVenda) AS QtdVeiculosVendidos,
         SUM(CASE WHEN VND002_VENDA.StaValeCombustivel = 1 THEN 1 ELSE 0 END) AS QtdValesCombustiveis,
         SUM(VND002_VENDA.VlrPrecoVenda) AS TotalVendas,
@@ -40,5 +40,3 @@ BEGIN
     GROUP BY 
         VND001_VENDEDOR.NmeVendedor
 END
-
-GO
