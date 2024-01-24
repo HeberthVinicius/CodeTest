@@ -60,4 +60,4 @@ Este projeto é uma aplicação ASP.NET Core MVC que calcula e exibe comissões 
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
+Este projeto está licenciado sob a Licença MIT - veja o link [LICENSE - MIT](https://www.mit.edu/~amini/LICENSE.md) para detalhes.
