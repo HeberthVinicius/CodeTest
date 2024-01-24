@@ -8,17 +8,17 @@ using CodeTest.Repositories;
 namespace CodeTest.Services
 {
     public class ComissaoService : IComissaoService
-{
-    private readonly IComissaoRepository _comissaoRepository;
-
-    public ComissaoService(IComissaoRepository comissaoRepository)
     {
-        _comissaoRepository = comissaoRepository;
-    }
+        private readonly IComissaoRepository _comissaoRepository;
 
-    public List<ComissaoViewModel> ObterComissoesVendedores()
-    {
-        return _comissaoRepository.ListarComissoesVendedores();
+        public ComissaoService(IComissaoRepository comissaoRepository)
+        {
+            _comissaoRepository = comissaoRepository;
+        }
+
+        public List<ComissaoViewModel> ObterComissoesVendedores()
+        {
+            return _comissaoRepository.ListarComissoesVendedores();
+        }
     }
-}
 }

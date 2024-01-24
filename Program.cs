@@ -18,12 +18,9 @@ builder.Services.AddDbContext<DBCONCESSIONARIAContext>(options =>
 builder.Services.AddScoped<IComissaoService, ComissaoService>();
 builder.Services.AddScoped<IComissaoRepository, ComissaoRepository>();
 
-
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
-
-
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
